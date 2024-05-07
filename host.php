@@ -56,6 +56,11 @@ $device_actions = api_plugin_hook_function('device_action_array', $device_action
 set_default_action();
 
 switch (get_request_var('action')) {
+	case '9':  // SSH action
+        handle_ssh_actions();
+        break;
+    // More cases can be added below
+    
 	case 'export':
 		host_export();
 
